@@ -1,0 +1,107 @@
+`timescale 1ns / 1ps
+
+module sdfifo_ctrl(
+				clk_20m,//20M时钟
+				clk_100m,//100M时钟
+				
+				wrf_din,			//wrFIFO写入数据
+				wrf_wrreq,		//wrFIFO写入请求
+				sdram_wr_ack,	//wrFIFO读出请求			
+				sys_data_in,		//wrFIFO读出数据			
+				sdram_wr_req,	//请求写入SDRAM
+				
+				sys_data_out,  //rdFIFO写入数据
+				rdf_rdreq,			//rdFIFO读出请求
+				sdram_rd_ack,	//rdFIFO写入请求
+				rdf_dout,			//rdFIFO读出数据
+				sdram_rd_req,	//请求读出SDRAM
+				
+				syswr_done,		//写入数据结束
+				tx_start	,			//请求开启串口发送
+				
+				wrf_use,
+				rdf_use
+			);
+
+input clk_20m;	//PLL输出25MHz时钟
+input clk_100m;	//PLL输出100MHz时钟
+
+//wrfifo
+input[15:0] 	wrf_din;							//wrFIFO写入数据
+input 				wrf_wrreq;						//wrFIFO写入请求
+input 				sdram_wr_ack;				//wrFIFO读出请求	
+output[15:0] sys_data_in;					//wrFIFO读出数据
+output 			sdram_wr_req;				//请求写入SDRAM
+
+
+//rdfifo
+input[15:0] 	sys_data_out;			//rdFIFO写入数据
+input 				rdf_rdreq;					//rdFIFO读出请求
+input 				sdram_rd_ack;			//rdFIFO写入请求
+output[15:0] rdf_dout;					//rdFIFO读出数据
+output 			sdram_rd_req;			//请求读出SDRAM
+
+
+input syswr_done;		//所有数据写入sdram完成标志位
+output tx_start;			//串口发送数据启动标志位，高有效
+
+output[8:0] wrf_use;
+output[8:0] rdf_use; 
+
+
+/*-------------------------------------Wire---------------------------------------------*/
+wire[8:0] wrf_use;			//sdram数据写入缓存FIFO已用存储空间数量
+wire[8:0] rdf_use;			//sdram数据读出缓存FIFO已用存储空间数量	
+
+
+/*-------------------------------------Assignment--------------------------------------*/
+//assign sys_addr = 22'h1a9e21;	//测试用
+assign sdram_wr_req = ((wrf_use >= 9'd8) & ~syswr_done);	//FIFO（8个16bit数据）即发出写SDRAM请求信号
+
+
+//被修改。增加结束判断
+assign sdram_rd_req = ((rdf_use <= 9'd256) & syswr_done) && (!__wire_read_stop);	//sdram写入完成且FIFO半空（256个16bit数据）即发出读SDRAM请求信号
+
+
+assign tx_start = ((rdf_use != 9'd0) & syswr_done);				//启动串口发送数据
+
+////////////////////////被修改开始//////////////////////////////////
+//为了只读取4次SDRAM，添加如下语句，否则读操作将无休止。。
+reg		[3:0]read_counter	=4'd0;
+reg		read_stop					=1'd0;
+wire	__wire_read_stop	=read_stop;
+
+always @ (posedge sdram_rd_ack)
+begin
+		if(read_counter==4'd6)
+				read_stop	<=1'd1;
+		else if(read_stop==1'd0)
+				read_counter	<=	read_counter+1;
+end
+//////////////////////被修改结束////////////////////////////////		
+
+	
+
+
+wrfifo			uut_wrfifo(
+					.data(wrf_din),
+					.rdclk(clk_100m),
+					.rdreq(sdram_wr_ack),				
+					.wrclk(clk_100m),//注意，这里经过修改，改为100M
+					.wrreq(wrf_wrreq),
+					.q(sys_data_in),
+					.wrusedw(wrf_use)
+					);	
+
+
+rdfifo			uut_rdfifo(
+					.data(sys_data_out),
+					.rdclk(clk_20m),
+					.rdreq(rdf_rdreq),				
+					.wrclk(clk_100m),
+					.wrreq(sdram_rd_ack),
+					.q(rdf_dout),
+					.wrusedw(rdf_use)
+					);	
+
+endmodule

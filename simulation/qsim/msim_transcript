@@ -1,0 +1,129 @@
+# Reading F:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do sdr_test_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying F:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied F:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test {F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/PLL.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PLL
+# 
+# Top level modules:
+# 	PLL
+# vlog -vlog01compat -work work +incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test {F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdr_para.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# vlog -vlog01compat -work work +incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test {F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/uart_tx.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module uart_tx
+# 
+# Top level modules:
+# 	uart_tx
+# vlog -vlog01compat -work work +incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test {F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/uart_speed_select.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module uart_speed_select
+# 
+# Top level modules:
+# 	uart_speed_select
+# vlog -vlog01compat -work work +incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test {F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/uart_ctrl.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module uart_ctrl
+# 
+# Top level modules:
+# 	uart_ctrl
+# vlog -vlog01compat -work work +incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test {F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdr_test.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sdr_test
+# 
+# Top level modules:
+# 	sdr_test
+# vlog -vlog01compat -work work +incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test {F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdram_top.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sdram_top
+# 
+# Top level modules:
+# 	sdram_top
+# vlog -vlog01compat -work work +incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test {F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sys_ctrl.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sys_ctrl
+# 
+# Top level modules:
+# 	sys_ctrl
+# vlog -vlog01compat -work work +incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test {F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/wrfifo.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module wrfifo
+# 
+# Top level modules:
+# 	wrfifo
+# vlog -vlog01compat -work work +incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test {F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdfifo_ctrl.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sdfifo_ctrl
+# 
+# Top level modules:
+# 	sdfifo_ctrl
+# vlog -vlog01compat -work work +incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test {F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/rdfifo.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module rdfifo
+# 
+# Top level modules:
+# 	rdfifo
+# vlog -vlog01compat -work work +incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test {F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/datagene.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module datagene
+# ** Warning: F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/datagene.v(47): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	datagene
+# vlog -vlog01compat -work work +incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test {F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/rom.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module rom
+# 
+# Top level modules:
+# 	rom
+# vlog -vlog01compat -work work +incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/db {F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/db/pll_altpll.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PLL_altpll
+# 
+# Top level modules:
+# 	PLL_altpll
+# vlog -vlog01compat -work work +incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test {F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdram_cmd.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sdram_cmd
+# 
+# Top level modules:
+# 	sdram_cmd
+# vlog -vlog01compat -work work +incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test {F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdram_ctrl.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sdram_ctrl
+# 
+# Top level modules:
+# 	sdram_ctrl
+# vlog -vlog01compat -work work +incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test {F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdram_wr_data.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sdram_wr_data
+# 
+# Top level modules:
+# 	sdram_wr_data
+# 
+# vlog -vlog01compat -work work +incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test {F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdram_rom_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sdr_test
+# ** Error: F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdram_rom_tb.v(43): (vlog-2110) Illegal reference to net "clk".
+# 
+# ** Error: F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdram_rom_tb.v(45): (vlog-2110) Illegal reference to net "clk".
+# 
+# ** Error: F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdram_rom_tb.v(46): (vlog-2110) Illegal reference to net "rst_n".
+# 
+# ** Error: F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdram_rom_tb.v(47): (vlog-2110) Illegal reference to net "rst_n".
+# 
+# ** Error: F:/altera/13.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./sdr_test_run_msim_rtl_verilog.do line 26
+# F:/altera/13.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -vlog01compat -work work +incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test {F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdram_rom_tb.v}"

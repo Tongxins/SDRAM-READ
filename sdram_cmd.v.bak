@@ -1,0 +1,161 @@
+`timescale 1ns / 1ps
+/*****************************************************
+
+// Description	: 		SDRAM命令模块
+//	实现功能			：	命令逻辑实现
+*****************************************************/
+module sdram_cmd(
+				clk,rst_n,
+				sdram_cke,sdram_cs_n,sdram_ras_n,sdram_cas_n,sdram_we_n,sdram_ba,sdram_addr,
+				sys_addr,
+				init_state,work_state
+			);
+
+			
+input clk;					//50MHz
+input rst_n;				//低电平复位信号
+
+// SDRAM硬件接口
+output 			sdram_cke;				// SDRAM时钟有效信号
+output 			sdram_cs_n;				//	SDRAM片选信号
+output 			sdram_ras_n;			//	SDRAM行地址选通脉冲
+output 			sdram_cas_n;			//	SDRAM列地址选通脉冲
+output 			sdram_we_n;			//	SDRAM写允许位
+output[1:0] 	sdram_ba;					//	SDRAM的L-Bank地址线
+output[11:0] sdram_addr;				// SDRAM地址总线
+
+// SDRAM封装接口
+input[21:0] sys_addr;			// 读写SDRAM时地址暂存器，(bit21-20)L-Bank地址:(bit19-8)为行地址，(bit7-0)为列地址 
+
+// SDRAM内部接口
+input[4:0] init_state;			// SDRAM初始化状态寄存器
+input[3:0] work_state;		// SDRAM读写状态寄存器
+
+
+`include "sdr_para.v"		// 包含SDRAM参数定义模块
+
+//-------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------
+reg[4:0] 	sdram_cmd_r;		//	SDRAM操作命令，对应5个管脚
+reg[1:0] 	sdram_ba_r;			//BA[1:0]
+reg[11:0] 	sdram_addr_r;
+
+//命令管脚：	4				3				2				1				0
+//						cke			cs_n		ras_n		cas_n		we_n
+assign {sdram_cke,sdram_cs_n,sdram_ras_n,sdram_cas_n,sdram_we_n} = sdram_cmd_r;
+assign sdram_ba = sdram_ba_r;
+assign sdram_addr = sdram_addr_r;
+
+//-------------------------------------------------------------------------------
+//SDRAM命令参数赋值
+always @ (posedge clk or negedge rst_n) begin
+	if(!rst_n) 
+			begin
+				sdram_cmd_r <= 5'b01111;//上电后命令
+				sdram_ba_r <= 2'b11;			//上电后块选择初始值	
+				sdram_addr_r <= 12'hfff;	//地址总线初始化
+			end
+			
+	else
+		case (init_state)
+				`I_NOP,`I_TRP,`I_TRF1,`I_TRF2,`I_TRF3,`I_TRF4,`I_TRF5,`I_TRF6,`I_TRF7,`I_TRF8,`I_TMRD: 
+					begin
+						sdram_cmd_r <= `CMD_NOP;// 10111 空操作命令
+						sdram_ba_r <= 2'b11;
+						sdram_addr_r <= 12'hfff;	
+					end
+					
+				`I_PRE: //预充电
+					begin
+						sdram_cmd_r <= `CMD_PRGE;//10010	预充电命令
+						sdram_ba_r <= 2'b11;
+						sdram_addr_r <= 12'hfff;
+					end 
+					
+				`I_AR1,`I_AR2,`I_AR3,`I_AR4,`I_AR5,`I_AR6,`I_AR7,`I_AR8: //自刷新
+					begin
+						sdram_cmd_r <= `CMD_A_REF;//10001 自刷新命令
+						sdram_ba_r <= 2'b11;
+						sdram_addr_r <= 12'hfff;						
+					end 	
+					
+				`I_MRS: //重要！！！！！！
+						begin	//模式寄存器设置，可根据实际需要进行设置
+							sdram_cmd_r <= `CMD_LMR;//10000 模式寄存器设置
+							sdram_ba_r <= 2'b00;	//操作模式设置
+							sdram_addr_r <= {
+										 2'b00,			//操作模式设置
+										 1'b0,			//操作模式设置(这里设置为A9=0,即突发读/突发写)
+										 2'b00,			//操作模式设置({A8,A7}=00),当前操作为模式寄存器设置
+										 
+										 3'b010,			// CAS潜伏期设置(这里设置为2，{A6,A5,A4}=010)
+										 1'b0,				//突发传输方式(这里设置为顺序，A3=b0)
+										 3'b011			//突发长度(这里设置为8，{A2,A1,A0}=011)
+									};
+						end	
+						
+				`I_DONE:
+					case (work_state)
+					
+								//空闲以及各种等待时间都工作于NOP
+								`W_IDLE,`W_TRCD,`W_CL,`W_TRFC,`W_RD,`W_WD,`W_TDAL: 
+										begin
+												sdram_cmd_r <= `CMD_NOP;
+												sdram_ba_r <= 2'b11;
+												sdram_addr_r <= 12'hfff;
+										end
+										
+									//	行有效状态
+									`W_ACTIVE: 
+											begin
+												sdram_cmd_r 	<= `CMD_ACTIVE;		//10011 行有效命令
+												sdram_ba_r 		<= sys_addr[21:20];	//L-Bank地址
+												sdram_addr_r 	<= sys_addr[19:8];		//行地址
+											end
+								
+									
+									`W_READ: 
+											begin
+												sdram_cmd_r <= `CMD_READ;		//10101 开始读，锁定列地址
+												sdram_ba_r <= sys_addr[21:20];	//L-Bank地址
+												sdram_addr_r <= {
+																4'b0100,				// A10=1,设置写完成允许预充电
+																sys_addr[7:0]	//列地址  
+															};
+											end
+										
+									`W_WRITE: 
+											begin
+													sdram_cmd_r <= `CMD_WRITE;//10100 开始写，锁定列地址
+													sdram_ba_r <= sys_addr[21:20];	//L-Bank地址
+													sdram_addr_r <= {
+																	4'b0100,				// A10=1,设置写完成允许预充电
+																	sys_addr[7:0]	//列地址  
+																};
+											end				
+											
+									`W_AR: 
+											begin
+													sdram_cmd_r <= `CMD_A_REF;//10001 自刷新
+													sdram_ba_r <= 2'b11;
+													sdram_addr_r <= 12'hfff;	
+											end
+											
+							default: begin
+									sdram_cmd_r <= `CMD_NOP;
+									sdram_ba_r <= 2'b11;
+									sdram_addr_r <= 12'hfff;	
+								end
+						endcase
+						
+						
+				default: begin
+							sdram_cmd_r <= `CMD_NOP;
+							sdram_ba_r <= 2'b11;
+							sdram_addr_r <= 12'hfff;	
+						end
+			endcase
+end
+
+endmodule
+

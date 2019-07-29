@@ -1,0 +1,40 @@
+# Reading F:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# ** Warning: (vish-14) Failed to open "modelsim.ini" specified by the MODELSIM environment variable.
+# No such file or directory. (errno = ENOENT)
+# reading F:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini
+# Loading project rom.v
+vsim -novopt work.datagene
+# vsim -novopt work.datagene 
+# Loading work.datagene
+force -freeze sim:/datagene/clk_20m 1 0, 0 {10000 ps} -r 20000
+force -freeze sim:/datagene/clk_100m 1 0, 0 {10000 ps} -r 20000
+force -freeze sim:/datagene/rst_n 1 40
+run 500
+add wave -position end  sim:/datagene/clk_20m
+add wave -position end  sim:/datagene/clk_100m
+add wave -position end  sim:/datagene/rst_n
+add wave -position end  sim:/datagene/wrf_din
+add wave -position end  sim:/datagene/wrf_wrreq
+add wave -position end  sim:/datagene/moni_addr
+add wave -position end  sim:/datagene/syswr_done
+add wave -position end  sim:/datagene/memread
+add wave -position end  sim:/datagene/memaddress
+add wave -position end  sim:/datagene/sdram_rd_ack
+add wave -position end  sim:/datagene/datain
+add wave -position end  sim:/datagene/sdr_rdackr1
+add wave -position end  sim:/datagene/sdr_rdackr2
+add wave -position end  sim:/datagene/delay
+add wave -position end  sim:/datagene/wr_done
+add wave -position end  sim:/datagene/memrd
+add wave -position end  sim:/datagene/addr
+add wave -position end  sim:/datagene/wrf_wrreqr
+add wave -position end  sim:/datagene/wrf_dinr
+add wave -position end  sim:/datagene/memaddr
+add wave -position end  sim:/datagene/neg_rdack
+add wave -position end  sim:/datagene/delay_done
+add wave -position end  sim:/datagene/cntwr
+force clk_20m 0 0,1 10 -r 20
+force clk_100m 0 0,1 10 -r 20
+force rst_n 0 20,1 40 
+run 500
+run 500

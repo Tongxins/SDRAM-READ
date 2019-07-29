@@ -1,0 +1,28 @@
+
+
+F:/FPGA/EP4CE10-NIOS/SDRAM_Test/clk_ctrl.v
+
+Aug 09 09AM:57:07>: Error in CNX file format.
+
+Error messages are listed in file
+F:/FPGA/EP4CE10-NIOS/SDRAM_Test/clk_ctrl.cnxerr.
+
+Can't create the custom megafunction variation file(s)
+
+F:/FPGA/EP4CE10-NIOS/SDRAM_Test/clk_ctrl.v
+
+Aug 09 09AM:57:13>: Error in CNX file format.
+
+Error messages are listed in file
+F:/FPGA/EP4CE10-NIOS/SDRAM_Test/clk_ctrl.cnxerr.
+
+Can't create the custom megafunction variation file(s)
+
+F:/FPGA/EP4CE10-NIOS/SDRAM_Test/clk_ctrl.v
+
+Aug 09 10AM:00:44>: Error in CNX file format.
+
+Error messages are listed in file
+F:/FPGA/EP4CE10-NIOS/SDRAM_Test/clk_ctrl.cnxerr.
+
+Can't create the custom megafunction variation file(s)

@@ -1,0 +1,330 @@
+m255
+K3
+13
+cModel Technology
+Z0 dF:\FPGA\EP4CE10-NIOS\SDRAM_Test\simulation\qsim
+vdatagene
+I>bZ>Hzi406:CmhAP9?0]I0
+VJ5ZhgmB;`mQSmITdKSHnz1
+Z1 dF:\FPGA\EP4CE10-NIOS\SDRAM_Test\simulation\qsim
+w1502882751
+8F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/datagene.v
+FF:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/datagene.v
+L0 3
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test -O0
+!i10b 1
+!s100 gz^XXzXEc]k7:III8`Q7X2
+!s85 0
+!s108 1502887462.537000
+!s107 F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/datagene.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test|F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/datagene.v|
+!s101 -O0
+vPLL
+I4aHO[_[7TaHDZKQVEYaG80
+V4G:Qe@9n1Zn>L[bWK`P;<3
+R1
+w1502591551
+8F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/PLL.v
+FF:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/PLL.v
+L0 39
+R2
+r1
+31
+R3
+n@p@l@l
+R4
+!i10b 1
+!s100 f]aYW7hC5:Q2_0K5aFMhR1
+!s85 0
+!s108 1502887461.019000
+!s107 F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/PLL.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test|F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/PLL.v|
+!s101 -O0
+vPLL_altpll
+IFE[B9B?E34:0[HjkOT]=63
+VDEVoo@z0kBdhP<U7>^e2A1
+R1
+w1502591557
+8F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/db/pll_altpll.v
+FF:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/db/pll_altpll.v
+L0 30
+R2
+r1
+31
+R3
+n@p@l@l_altpll
+!i10b 1
+!s100 n6g_69gmMMFoO6c30g7_:0
+!s85 0
+!s108 1502887462.806000
+!s107 F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/db/pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/db|F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/db/pll_altpll.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/db -O0
+vrdfifo
+IICFc6:@GKEK4d[X3R:h[=2
+VmI2?@z2CY28J[>Tz>FLG?1
+R1
+w1502592923
+8F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/rdfifo.v
+FF:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/rdfifo.v
+L0 39
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 kaEN?^6eYRecXFd2Gnc9<1
+!s85 0
+!s108 1502887462.406000
+!s107 F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/rdfifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test|F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/rdfifo.v|
+!s101 -O0
+vrom
+IHBf]a`4KnHB9Ofo06Yh7z3
+V@6`C7F[HMGbWA5jB]TYzj1
+R1
+w1502875999
+8F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/rom.v
+FF:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/rom.v
+L0 39
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 eck5^hGM>BVQnm?::6XM;2
+!s85 0
+!s108 1502887462.669000
+!s107 F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/rom.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test|F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/rom.v|
+!s101 -O0
+vsdfifo_ctrl
+I11H=<V:zeBKc[8FBeNA>Y1
+VDM??;CoAF7XU>b9QagFJl2
+R1
+w1502887314
+8F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdfifo_ctrl.v
+FF:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdfifo_ctrl.v
+L0 3
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 ND6GVH93ma`C[nfh?Y`7n1
+!s85 0
+!s108 1502887462.284000
+!s107 F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdfifo_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test|F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdfifo_ctrl.v|
+!s101 -O0
+vsdr_test
+Il475PEX]bzfL6=`6ML`JD3
+VLGeVc`]CaZijdBo=FRh^91
+R1
+w1502886686
+8F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdr_test.v
+FF:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdr_test.v
+L0 3
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 H@V1OgElg<akKn>gW[hT02
+!s85 0
+!s108 1502887461.782000
+!s107 F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdr_test.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test|F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdr_test.v|
+!s101 -O0
+vsdram_cmd
+I4nDh:Vg0I03<7?c;O3L051
+VWXUPbi`Mn:H0o1]N:I18L0
+R1
+w1502882753
+8F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdram_cmd.v
+FF:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdram_cmd.v
+Z5 FF:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdr_para.v
+L0 7
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 nV[@LhfB3Se;=f[5DRCNa1
+!s85 0
+!s108 1502887462.923000
+!s107 F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdr_para.v|F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdram_cmd.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test|F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdram_cmd.v|
+!s101 -O0
+vsdram_ctrl
+IjIDX:abB<ahP`^bhI1:=I3
+VCKR:>G5`[W?CJkMXc[9223
+R1
+Z6 w1502887217
+8F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdram_ctrl.v
+FF:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdram_ctrl.v
+R5
+L0 12
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 f`iXdi[T40_UI8YhD:l:A3
+!s85 0
+!s108 1502887463.054000
+!s107 F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdr_para.v|F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdram_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test|F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdram_ctrl.v|
+!s101 -O0
+vsdram_top
+IS7RhV5LLfoaWc45_SODiL0
+VbZS>8oj7?YagnkbQ]H:9h0
+R1
+w1502269599
+8F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdram_top.v
+FF:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdram_top.v
+L0 14
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 iC3hZUb86BbND[39z[]cB2
+!s85 0
+!s108 1502887461.905000
+!s107 F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdram_top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test|F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdram_top.v|
+!s101 -O0
+vsdram_wr_data
+IDdOZK=67H4mXUcbEIce^S0
+VFQCRYzGHT17C@[FEPbK=j1
+R1
+R6
+8F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdram_wr_data.v
+FF:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdram_wr_data.v
+R5
+L0 6
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 [FFiD]Y_X>?N:B:P@ajLj3
+!s85 0
+!s108 1502887463.207000
+!s107 F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdr_para.v|F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdram_wr_data.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test|F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sdram_wr_data.v|
+!s101 -O0
+vsys_ctrl
+I9FY[V^I=THODV`9_aYW;n3
+V;e[GE;iJc^Pl<Id8USkdz2
+R1
+w1502887218
+8F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sys_ctrl.v
+FF:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sys_ctrl.v
+L0 3
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 gX:BkViRfNXlXz3C5<^iz2
+!s85 0
+!s108 1502887462.036000
+!s107 F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sys_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test|F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/sys_ctrl.v|
+!s101 -O0
+vuart_ctrl
+I30f2>z8l7:H2dhm=kd3[c3
+V=1?DSM1MT8IXAAD4Nhe6U0
+R1
+w1336524579
+8F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/uart_ctrl.v
+FF:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/uart_ctrl.v
+L0 3
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 W_c9UGQFS@KCZ?]OXc8gB3
+!s85 0
+!s108 1502887461.636000
+!s107 F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/uart_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test|F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/uart_ctrl.v|
+!s101 -O0
+vuart_speed_select
+I:TTZTBTFBQkC;Q1`dEAel3
+V@9U_;^6>VkQLDNa?EM9jM3
+R1
+w1502589998
+8F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/uart_speed_select.v
+FF:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/uart_speed_select.v
+L0 17
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 dg:k<aea;NI8TgFHkJdba3
+!s85 0
+!s108 1502887461.482000
+!s107 F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/uart_speed_select.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test|F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/uart_speed_select.v|
+!s101 -O0
+vuart_tx
+Iz9aGRkXlZigQD4B`=6<SR2
+VPRdeQRGI5Qd7kLZ9SNi_73
+R1
+w1502887150
+8F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/uart_tx.v
+FF:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/uart_tx.v
+L0 3
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 7OHA`V6[z7^E_XLHc3if;2
+!s85 0
+!s108 1502887461.350000
+!s107 F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/uart_tx.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test|F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/uart_tx.v|
+!s101 -O0
+vwrfifo
+I0>NaAa`L1iX5ci_QLe`l>2
+Vd>1SCJW3m4To23F=JI[z`3
+R1
+w1502243811
+8F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/wrfifo.v
+FF:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/wrfifo.v
+L0 39
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 HjDBKEgMZL2D45ReUOJ[@1
+!s85 0
+!s108 1502887462.168000
+!s107 F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/wrfifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test|F:/FPGA/EP4CE10-Verilog-VHDL/verilog/SDRAM_Test/wrfifo.v|
+!s101 -O0
